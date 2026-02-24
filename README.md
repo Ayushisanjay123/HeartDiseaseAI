@@ -63,3 +63,18 @@ The Random Forest model slightly outperformed the ANN model, therefore it is sel
 The trained ANN model was saved using:
 
 model.save("ann_model.keras")
+
+## Deployment Implementation (deployment.py)
+
+The `deployment.py` file implements the Streamlit web application for Heart Disease Prediction.
+
+The trained Random Forest model is loaded using `pickle`, allowing predictions without retraining the model. Users enter medical details such as age, blood pressure, cholesterol level, ECG results, and other health parameters through an interactive interface.
+
+The application:
+- Collects user input using Streamlit fields
+- Converts inputs into numerical format
+- Sends data to the trained model
+- Displays whether the person has heart disease or not
+
+### ▶ Run the App
+streamlit run deployment.py
