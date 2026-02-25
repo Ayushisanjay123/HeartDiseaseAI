@@ -76,7 +76,7 @@ The application:
 - Sends data to the trained model
 - Displays whether the person has heart disease or not
 
-### ▶ Run the App
+###  Run the App
 streamlit run deployment.py
 
 ### Power BI Dashboard Data Preparation
