@@ -78,3 +78,33 @@ The application:
 
 ### ▶ Run the App
 streamlit run deployment.py
+
+### Power BI Dashboard Data Preparation
+
+A CSV file was generated to support Power BI dashboard visualization using the best-performing Machine Learning model (Random Forest Classifier).
+
+The trained model was used to predict heart disease outcomes, and a new dataset was created containing:
+
+- Patient feature data
+
+- Actual heart disease labels
+
+- Model predicted results
+
+This dataset enables performance comparison and interactive visualization in Power BI.
+
+### Process:
+
+- Loaded processed dataset
+
+- Generated predictions using the tuned Random Forest model
+
+- Combined features, actual values, and predictions
+
+Exported final dataset as CSV
+
+### Output File
+
+heart_disease_dashboard.csv
+
+This file is used to build the Heart Disease Prediction Dashboard for model analysis and accuracy visualization.
