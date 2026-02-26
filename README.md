@@ -1,140 +1,141 @@
-# HeartDiseaseAI
-Predict whether a patient has heart disease using medical attributes
-Performed data preprocessing,EDA Visualization and dataset spliting.
+#  HeartDiseaseAI
 
-Focused on machine learning model training using cross-validation. Due to execution time limitations in the Codespace environment, full model comparison could not be completed. Logistic Regression was successfully implemented as the baseline model, achieving 88.3% accuracy** for heart disease prediction. Further model comparison and deep learning implementation will continue in the next stage.
+##  Project Overview
 
-## Machine Learning Phase
+**HeartDiseaseAI** is a machine learning and deep learning project that predicts whether a patient has heart disease using medical attributes.
+The project includes data preprocessing, exploratory data analysis (EDA), model training, deployment using Streamlit, and an interactive Power BI analytics dashboard.
 
-Implemented disease prediction using Machine Learning models.
+---
+
+##  Project Workflow
+
+* Data preprocessing and cleaning
+* Exploratory Data Analysis (EDA) & visualization
+* Dataset splitting (train–test)
+* Machine Learning model training
+* Hyperparameter tuning
+* Deep Learning comparison
+* Model deployment
+* Power BI dashboard visualization
+
+---
+
+##  Machine Learning Phase
 
 ### Models Used
-- Logistic Regression (baseline)
-- Random Forest Classifier
+
+* Logistic Regression (Baseline)
+* Random Forest Classifier
 
 ### Improvements
-- Applied GridSearchCV for hyperparameter tuning
-- Selected best Random Forest model based on performance
 
-### Evaluation
-- Accuracy score
-- Confusion Matrix
-- Feature Importance analysis
+* Hyperparameter tuning using **GridSearchCV**
+* Model selection based on performance metrics
+
+### Evaluation Metrics
+
+* Accuracy Score
+* Confusion Matrix
+* Feature Importance Analysis
+
+### Results
+
+* Logistic Regression Accuracy: **88.3%**
+* Random Forest Accuracy: **88.47%**
+
+✅Random Forest achieved better performance and was selected as the final model.
 
 ### Model Saving
-Final optimized model saved using pickle:
+
+```
 random_forest_model.pkl
+```
 
-Random Forest achieved better performance compared to Logistic Regression.
+---
 
-### Deep Learning – Artificial Neural Network (ANN)
-Deep Learning – Artificial Neural Network (ANN)
+##  Deep Learning – Artificial Neural Network (ANN)
 
-An Artificial Neural Network (ANN) was implemented to perform heart disease prediction and to compare deep learning performance with the machine learning model.
+An ANN model was implemented using TensorFlow/Keras to compare deep learning performance with machine learning models.
 
 ### ANN Workflow
 
-- Data preprocessing and feature scaling
+* Data preprocessing & feature scaling
+* Train–test split
+* ANN model creation
+* Model training and evaluation
 
-- Train–test split
+### Performance
 
-- ANN model creation using TensorFlow/Keras
+* ANN Accuracy: **88.44%**
+* Random Forest Accuracy: **88.47%**
 
-- Model training and evaluation
-
-- Model saving for deployment
-
-### Model Performance
-
-- ANN Accuracy: 0.8844 (88.44%)
-
-### Model Accuracy Comparison
-
-Random Forest (Machine Learning): 0.8847
-
-ANN (Deep Learning): 0.8844
-
-Although ANN achieved comparable performance, the Random Forest model provided slightly better accuracy and was selected as the final model for deployment.
-
-The Random Forest model slightly outperformed the ANN model, therefore it is selected as the final model for deployment, while ANN serves as a deep learning benchmark.
+Although performance was comparable, Random Forest slightly outperformed ANN and was chosen for deployment.
 
 ### Model Saving
 
-The trained ANN model was saved using:
-
+```
 model.save("ann_model.keras")
+```
 
-## Deployment Implementation (deployment.py)
+---
 
-The `deployment.py` file implements the Streamlit web application for Heart Disease Prediction.
+##  Deployment (Streamlit App)
 
-The trained Random Forest model is loaded using `pickle`, allowing predictions without retraining the model. Users enter medical details such as age, blood pressure, cholesterol level, ECG results, and other health parameters through an interactive interface.
+The `deployment.py` file implements a Streamlit web application for heart disease prediction.
 
-The application:
-- Collects user input using Streamlit fields
-- Converts inputs into numerical format
-- Sends data to the trained model
-- Displays whether the person has heart disease or not
+### Features
 
-###  Run the App
+* User medical input interface
+* Data preprocessing
+* Prediction using trained Random Forest model
+* Instant disease prediction output
+
+### Run Application
+
 streamlit run deployment.py
+```
 
-### Power BI Dashboard Data Preparation
+---
 
-A CSV file was generated to support Power BI dashboard visualization using the best-performing Machine Learning model (Random Forest Classifier).
+##  Power BI Dashboard
 
-The trained model was used to predict heart disease outcomes, and a new dataset was created containing:
+A dataset was generated using the best-performing Random Forest model to enable interactive visualization.
 
-- Patient feature data
+### Dataset Includes
 
-- Actual heart disease labels
-
-- Model predicted results
-
-This dataset enables performance comparison and interactive visualization in Power BI.
-
-### Process:
-
-- Loaded processed dataset
-
-- Generated predictions using the tuned Random Forest model
-
-- Combined features, actual values, and predictions
-
-Exported final dataset as CSV
+* Patient features
+* Actual labels
+* Model predictions
 
 ### Output File
 
+```
 heart_disease_dashboard.csv
+```
 
-This file is used to build the Heart Disease Prediction Dashboard for model analysis and accuracy visualization.
-
-#  Heart Disease Analysis Dashboard (Power BI)
-
-##  Overview
-
-An interactive **Power BI dashboard** for analyzing heart disease data and identifying key health risk factors using visual analytics.
-
-##  Features
+### Dashboard Features
 
 * KPI cards for patient statistics and model accuracy
-* Interactive slicers for filtering data
-* Visualizations for heart disease distribution, diabetes risk, and health metrics
+* Interactive slicers for filtering
+* Visual analysis of disease distribution and risk factors
 
-##  Tools
+---
 
-* Microsoft Power BI
-* Data Visualization
+## 🛠 Tools & Technologies
 
-##  Usage
+* Python
+* Scikit-learn
+* TensorFlow / Keras
+* Streamlit
+* Power BI
+* Pandas & NumPy
 
-Open the `.pbix` file in Power BI Desktop and use slicers to explore insights.
+---
 
-## Key Insights
+## 📈 Key Insights
 
-Patients with higher fasting blood sugar show increased diabetes risk.
+* Elevated fasting blood sugar increases diabetes-related risk.
+* Cholesterol and blood pressure strongly influence heart disease prediction.
+* Random Forest provided the most stable performance.
 
-Cholesterol and blood pressure trends influence heart disease outcomes.
-
-Interactive visuals allow quick comparison across patient groups.
 
