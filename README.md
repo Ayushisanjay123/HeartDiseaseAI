@@ -108,3 +108,33 @@ Exported final dataset as CSV
 heart_disease_dashboard.csv
 
 This file is used to build the Heart Disease Prediction Dashboard for model analysis and accuracy visualization.
+
+#  Heart Disease Analysis Dashboard (Power BI)
+
+##  Overview
+
+An interactive **Power BI dashboard** for analyzing heart disease data and identifying key health risk factors using visual analytics.
+
+##  Features
+
+* KPI cards for patient statistics and model accuracy
+* Interactive slicers for filtering data
+* Visualizations for heart disease distribution, diabetes risk, and health metrics
+
+##  Tools
+
+* Microsoft Power BI
+* Data Visualization
+
+##  Usage
+
+Open the `.pbix` file in Power BI Desktop and use slicers to explore insights.
+
+## Key Insights
+
+Patients with higher fasting blood sugar show increased diabetes risk.
+
+Cholesterol and blood pressure trends influence heart disease outcomes.
+
+Interactive visuals allow quick comparison across patient groups.
+
