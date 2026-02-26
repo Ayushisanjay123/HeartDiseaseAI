@@ -43,7 +43,7 @@ The project includes data preprocessing, exploratory data analysis (EDA), model 
 * Logistic Regression Accuracy: **88.3%**
 * Random Forest Accuracy: **88.47%**
 
-✅Random Forest achieved better performance and was selected as the final model.
+ Random Forest achieved better performance and was selected as the final model.
 
 ### Model Saving
 
@@ -92,6 +92,7 @@ The `deployment.py` file implements a Streamlit web application for heart diseas
 
 ### Run Application
 
+```bash
 streamlit run deployment.py
 ```
 
@@ -121,7 +122,7 @@ heart_disease_dashboard.csv
 
 ---
 
-## 🛠 Tools & Technologies
+##  Tools & Technologies
 
 * Python
 * Scikit-learn
@@ -132,10 +133,9 @@ heart_disease_dashboard.csv
 
 ---
 
-## 📈 Key Insights
+##  Key Insights
 
 * Elevated fasting blood sugar increases diabetes-related risk.
 * Cholesterol and blood pressure strongly influence heart disease prediction.
 * Random Forest provided the most stable performance.
-
 
