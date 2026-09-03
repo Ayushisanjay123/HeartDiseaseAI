@@ -2,12 +2,12 @@
 
 ##  Project Overview
 
-**HeartDiseaseAI** is a machine learning and deep learning project that predicts whether a patient has heart disease using medical attributes.
-The project includes data preprocessing, exploratory data analysis (EDA), model training, deployment using Streamlit, and an interactive Power BI analytics dashboard.
+**HeartDiseaseAI** is an end-to-end machine learning and deep learning project that predicts the presence of heart disease based on patient health attributes. The project covers data preprocessing, exploratory data analysis, machine learning model development, hyperparameter tuning, deep learning comparison, Streamlit deployment, and Power BI dashboard development.
 
 ---
 
 ##  Project Workflow
+**Train-test data splitting**
 
 * Data preprocessing and cleaning
 * Exploratory Data Analysis (EDA) & visualization
@@ -34,16 +34,16 @@ The project includes data preprocessing, exploratory data analysis (EDA), model 
 
 ### Evaluation Metrics
 
-* Accuracy Score
+* Accuracy
 * Confusion Matrix
-* Feature Importance Analysis
+* Feature Importance
 
 ### Results
 
 * Logistic Regression Accuracy: **88.3%**
 * Random Forest Accuracy: **88.47%**
 
- Random Forest achieved better performance and was selected as the final model.
+Random Forest achieved the highest accuracy among the evaluated models and was selected for deployment.
 
 ### Model Saving
 
@@ -69,8 +69,7 @@ An ANN model was implemented using TensorFlow/Keras to compare deep learning per
 * ANN Accuracy: **88.44%**
 * Random Forest Accuracy: **88.47%**
 
-Although performance was comparable, Random Forest slightly outperformed ANN and was chosen for deployment.
-
+The ANN and Random Forest models achieved comparable accuracy. Random Forest performed marginally better and was therefore selected for deployment.
 ### Model Saving
 
 ```
@@ -88,7 +87,8 @@ The `deployment.py` file implements a Streamlit web application for heart diseas
 * User medical input interface
 * Data preprocessing
 * Prediction using trained Random Forest model
-* Instant disease prediction output
+* Real-time prediction output based on user-provided input features
+  > **Disclaimer:** This project is developed for educational and demonstration purposes only. It is not intended to provide medical diagnosis or replace professional medical advice.
 
 ### Run Application
 
@@ -100,7 +100,7 @@ streamlit run deployment.py
 
 ##  Power BI Dashboard
 
-A dataset was generated using the best-performing Random Forest model to enable interactive visualization.
+The Power BI dashboard uses a dataset containing patient attributes, actual heart disease labels, and model predictions to analyze prediction results and explore patterns within the dataset.
 
 ### Dataset Includes
 
@@ -116,10 +116,13 @@ heart_disease_dashboard.csv
 
 ### Dashboard Features
 
-* KPI cards for patient statistics and model accuracy
-* Interactive slicers for filtering
-* Visual analysis of disease distribution and risk factors
+### Dashboard Features
 
+* KPI cards for patient and prediction statistics
+* Interactive slicers for filtering
+* Analysis of heart disease distribution
+* Visualization of patient risk factors
+* Comparison of actual and predicted outcomes
 ---
 
 ##  Tools & Technologies
@@ -133,9 +136,11 @@ heart_disease_dashboard.csv
 
 ---
 
-##  Key Insights
+## Key Findings
 
-* Elevated fasting blood sugar increases diabetes-related risk.
-* Cholesterol and blood pressure strongly influence heart disease prediction.
-* Random Forest provided the most stable performance.
+* Random Forest achieved the highest accuracy among the evaluated models at 88.47%.
+* ANN achieved a comparable accuracy of 88.44%.
+* Hyperparameter tuning was used to improve the Random Forest model.
+* Feature importance analysis was used to understand the contribution of input features to model predictions.
+* The final Random Forest model was integrated into a Streamlit application for interactive prediction.
 
